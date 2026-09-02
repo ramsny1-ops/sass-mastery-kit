@@ -1,0 +1,4 @@
+/// EXAMPLE: Interactive card
+/// Compile individually with: npx sass examples/35-interactive-card.scss dist/35-interactive-card.css
+@use "../src/scss" as kit;
+.card { @include kit.surface(1.5rem); @include kit.interactive-surface(-4px); }

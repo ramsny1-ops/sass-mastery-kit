@@ -1,0 +1,15 @@
+@use "../index" as kit;
+.dashboard {
+  display: grid;
+  grid-template-columns: 16rem minmax(0, 1fr);
+  min-height: 100vh;
+
+  &__sidebar { padding: kit.space(5); border-right: 1px solid kit.token("border"); }
+  &__content { padding: kit.space(6); }
+  &__stats { @include kit.auto-grid(14rem, kit.space(4)); }
+
+  @include kit.down("md") {
+    grid-template-columns: 1fr;
+    &__sidebar { display: none; }
+  }
+}

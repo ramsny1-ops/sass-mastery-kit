@@ -1,0 +1,4 @@
+/// EXAMPLE: Base card surface
+/// Compile individually with: npx sass examples/34-surface.scss dist/34-surface.css
+@use "../src/scss" as kit;
+.card { @include kit.surface(1.5rem); }

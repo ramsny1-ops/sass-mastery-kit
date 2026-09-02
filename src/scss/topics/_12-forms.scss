@@ -1,0 +1,28 @@
+@use "03-functions" as fn;
+@use "04-mixins" as m;
+
+/// FORMS
+/// ---------------------------------------------------------------------------
+/// Reusable form controls with focus, invalid, and disabled states.
+
+@mixin field($height: 2.75rem) {
+  width: 100%;
+  min-height: $height;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid fn.token("border");
+  border-radius: 0.65rem;
+  background: fn.token("surface");
+  color: fn.token("text");
+  font: inherit;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+
+  &::placeholder { color: fn.token("text-muted"); }
+  &:focus { border-color: fn.token("primary"); outline: 0; box-shadow: 0 0 0 3px fn.alpha(fn.token("primary"), 0.14); }
+  &:disabled { opacity: 0.65; cursor: not-allowed; }
+  &[aria-invalid="true"] { border-color: fn.token("danger"); }
+}
+
+@mixin field-group($gap: 0.4rem) {
+  display: grid;
+  gap: $gap;
+}

@@ -1,0 +1,5 @@
+/// EXAMPLE: Container query helper
+/// Compile individually with: npx sass examples/21-container-query.scss dist/21-container-query.css
+@use "../src/scss" as kit;
+.widget { container-type: inline-size; }
+.widget__actions { display: grid; @include kit.container-query(30rem) { display: flex; } }

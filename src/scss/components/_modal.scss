@@ -1,0 +1,13 @@
+@use "../index" as kit;
+.modal {
+  @include kit.absolute-fill;
+  position: fixed;
+  z-index: kit.$z-modal;
+  display: grid;
+  place-items: center;
+  padding: kit.space(4);
+  background: rgb(0 0 0 / .48);
+
+  &__dialog { @include kit.surface(kit.space(6), kit.$radius-lg, kit.$shadow-lg); width: min(32rem, 100%); }
+  &__actions { @include kit.flex-between(kit.space(3)); margin-top: kit.space(5); }
+}

@@ -1,0 +1,15 @@
+@use "../index" as kit;
+.navbar {
+  @include kit.flex-between(kit.space(4));
+  min-height: 4rem;
+  padding-inline: kit.space(5);
+  border-bottom: 1px solid kit.token("border");
+  background: kit.token("surface");
+
+  &__links { @include kit.cluster(kit.space(4)); }
+  &__brand { font-weight: 800; letter-spacing: -0.02em; }
+
+  @include kit.down("sm") {
+    &__links { display: none; }
+  }
+}

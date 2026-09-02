@@ -1,0 +1,16 @@
+@use "../index" as kit;
+.hero {
+  @include kit.twelve-column(kit.space(5));
+  align-items: center;
+  min-height: 32rem;
+  padding-block: kit.space(8);
+
+  &__copy { grid-column: span 7; }
+  &__visual { grid-column: span 5; @include kit.surface(kit.space(6)); }
+  &__title { @include kit.type-heading(2.25rem, 5rem, 800); }
+  &__actions { @include kit.cluster(kit.space(3)); margin-top: kit.space(5); }
+
+  @include kit.down("md") {
+    &__copy, &__visual { grid-column: 1 / -1; }
+  }
+}

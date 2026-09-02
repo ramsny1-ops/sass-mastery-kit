@@ -1,0 +1,4 @@
+/// EXAMPLE: Reduced motion override
+/// Compile individually with: npx sass examples/40-reduced-motion.scss dist/40-reduced-motion.css
+@use "../src/scss" as kit;
+.hero { transition: transform .4s; @include kit.reduced-motion { transition: none; } }

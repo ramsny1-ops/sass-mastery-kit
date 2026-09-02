@@ -1,0 +1,33 @@
+/// ANIMATION
+/// ---------------------------------------------------------------------------
+/// Animation primitives with reduced-motion coverage.
+
+@mixin motion-safe {
+  @media (prefers-reduced-motion: no-preference) { @content; }
+}
+
+@mixin fade-up($distance: 1rem, $duration: 420ms) {
+  @include motion-safe {
+    animation: fade-up $duration ease both;
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY($distance); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@mixin pulse($scale: 1.04, $duration: 1.8s) {
+  @include motion-safe {
+    animation: pulse $duration ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale($scale); }
+  }
+}
+
+@mixin stagger($count: 8, $step: 70ms) {
+  @for $i from 1 through $count {
+    &:nth-child(#{$i}) { animation-delay: $i * $step; }
+  }
+}

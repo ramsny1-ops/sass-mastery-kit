@@ -1,0 +1,4 @@
+/// EXAMPLE: Convert px to rem
+/// Compile individually with: npx sass examples/04-rem-function.scss dist/04-rem-function.css
+@use "../src/scss" as kit;
+.title { font-size: kit.rem(32px); }

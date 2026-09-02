@@ -1,0 +1,4 @@
+/// EXAMPLE: Button base
+/// Compile individually with: npx sass examples/29-button-base.scss dist/29-button-base.css
+@use "../src/scss" as kit;
+.button { @include kit.button-base; }

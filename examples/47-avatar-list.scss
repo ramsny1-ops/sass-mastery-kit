@@ -1,0 +1,5 @@
+/// EXAMPLE: Avatar stack
+/// Compile individually with: npx sass examples/47-avatar-list.scss dist/47-avatar-list.css
+@use "../src/scss" as kit;
+.avatars { @include kit.flex(row, flex-start, center); }
+.avatar { @include kit.circle(2.5rem); margin-left: -.5rem; border: 2px solid white; }

@@ -1,0 +1,4 @@
+/// EXAMPLE: Parameterized flexbox
+/// Compile individually with: npx sass examples/11-flex-basic.scss dist/11-flex-basic.css
+@use "../src/scss" as kit;
+.toolbar { @include kit.flex(row, space-between, center, 1rem, wrap); }

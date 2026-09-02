@@ -1,0 +1,4 @@
+/// EXAMPLE: Button variant
+/// Compile individually with: npx sass examples/30-button-primary.scss dist/30-button-primary.css
+@use "../src/scss" as kit;
+.button-primary { @include kit.button-base; @include kit.button-variant(kit.token("primary"), white); }

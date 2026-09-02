@@ -1,0 +1,4 @@
+/// EXAMPLE: Spacing function
+/// Compile individually with: npx sass examples/03-spacing-function.scss dist/03-spacing-function.css
+@use "../src/scss" as kit;
+.stack { display: grid; gap: kit.space(5); }

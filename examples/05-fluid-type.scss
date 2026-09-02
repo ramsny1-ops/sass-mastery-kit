@@ -1,0 +1,4 @@
+/// EXAMPLE: Fluid values
+/// Compile individually with: npx sass examples/05-fluid-type.scss dist/05-fluid-type.css
+@use "../src/scss" as kit;
+.hero-title { font-size: kit.fluid(2rem, 5rem); }

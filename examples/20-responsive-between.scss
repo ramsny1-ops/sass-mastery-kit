@@ -1,0 +1,4 @@
+/// EXAMPLE: Range query
+/// Compile individually with: npx sass examples/20-responsive-between.scss dist/20-responsive-between.css
+@use "../src/scss" as kit;
+.card { @include kit.between("sm", "lg") { padding: 1.25rem; } }

@@ -1,0 +1,4 @@
+/// EXAMPLE: Circle helper
+/// Compile individually with: npx sass examples/08-circle-mixin.scss dist/08-circle-mixin.css
+@use "../src/scss" as kit;
+.status-dot { @include kit.circle(.75rem); background: kit.token("success"); }

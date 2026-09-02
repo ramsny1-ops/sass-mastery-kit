@@ -1,0 +1,20 @@
+@use "sass:map";
+@use "02-maps" as maps;
+
+/// SPACING UTILITIES GENERATOR
+/// ---------------------------------------------------------------------------
+/// Demonstrates loops, interpolation, and map-driven class generation.
+
+@mixin spacing-utilities($prefix: "") {
+  @each $step, $value in maps.$spacing-scale {
+    .#{$prefix}m-#{$step} { margin: $value !important; }
+    .#{$prefix}mt-#{$step} { margin-top: $value !important; }
+    .#{$prefix}mb-#{$step} { margin-bottom: $value !important; }
+    .#{$prefix}mx-#{$step} { margin-inline: $value !important; }
+    .#{$prefix}my-#{$step} { margin-block: $value !important; }
+    .#{$prefix}p-#{$step} { padding: $value !important; }
+    .#{$prefix}px-#{$step} { padding-inline: $value !important; }
+    .#{$prefix}py-#{$step} { padding-block: $value !important; }
+    .#{$prefix}gap-#{$step} { gap: $value !important; }
+  }
+}

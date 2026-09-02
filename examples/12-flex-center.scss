@@ -1,0 +1,4 @@
+/// EXAMPLE: Centered flexbox
+/// Compile individually with: npx sass examples/12-flex-center.scss dist/12-flex-center.css
+@use "../src/scss" as kit;
+.empty-state { @include kit.flex-center(1rem); min-height: 20rem; }

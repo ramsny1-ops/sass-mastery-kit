@@ -1,0 +1,27 @@
+@use "03-functions" as fn;
+@use "01-variables" as v;
+
+/// CARDS AND SURFACES
+/// ---------------------------------------------------------------------------
+/// Surface mixins show composition: border + radius + shadow + optional hover.
+
+@mixin surface($padding: 1rem, $radius: v.$radius-md, $shadow: v.$shadow-sm) {
+  padding: $padding;
+  border: 1px solid fn.token("border");
+  border-radius: $radius;
+  background: fn.token("surface");
+  box-shadow: $shadow;
+}
+
+@mixin interactive-surface($lift: -3px) {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover { transform: translateY($lift); box-shadow: v.$shadow-md; }
+  }
+}
+
+@mixin glass-surface($blur: 16px) {
+  background: rgb(255 255 255 / 0.65);
+  border: 1px solid rgb(255 255 255 / 0.55);
+  backdrop-filter: blur($blur) saturate(125%);
+}

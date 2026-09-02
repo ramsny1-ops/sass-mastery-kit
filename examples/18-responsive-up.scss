@@ -1,0 +1,4 @@
+/// EXAMPLE: Min-width breakpoint
+/// Compile individually with: npx sass examples/18-responsive-up.scss dist/18-responsive-up.css
+@use "../src/scss" as kit;
+.sidebar { display: none; @include kit.up("lg") { display: block; } }

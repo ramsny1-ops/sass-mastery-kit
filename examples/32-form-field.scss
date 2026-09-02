@@ -1,0 +1,4 @@
+/// EXAMPLE: Form input
+/// Compile individually with: npx sass examples/32-form-field.scss dist/32-form-field.css
+@use "../src/scss" as kit;
+.input { @include kit.field; }

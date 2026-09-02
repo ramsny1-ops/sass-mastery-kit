@@ -1,0 +1,4 @@
+/// EXAMPLE: Light theme variables
+/// Compile individually with: npx sass examples/26-theme-light.scss dist/26-theme-light.css
+@use "../src/scss" as kit;
+:root { @include kit.theme-light; }

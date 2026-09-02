@@ -1,0 +1,5 @@
+/// EXAMPLE: Pricing layout
+/// Compile individually with: npx sass examples/44-pricing-grid.scss dist/44-pricing-grid.css
+@use "../src/scss" as kit;
+.pricing { @include kit.auto-grid(18rem, kit.space(5)); }
+.plan { @include kit.surface(kit.space(5)); }

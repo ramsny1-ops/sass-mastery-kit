@@ -1,0 +1,46 @@
+/// MAPS
+/// ---------------------------------------------------------------------------
+/// Maps are ideal for named scales, configuration tables, and loops.
+/// They make your system easier to extend than large groups of individual vars.
+
+$colors: (
+  "primary": #5b5bd6,
+  "secondary": #6b7280,
+  "success": #16875d,
+  "warning": #b7791f,
+  "danger": #c2413b,
+  "info": #1877b8,
+  "surface": #ffffff,
+  "surface-dark": #111318,
+  "text": #15171c,
+  "text-muted": #667085,
+  "border": #d8dde7
+) !default;
+
+$breakpoints: (
+  "xs": 30rem,
+  "sm": 40rem,
+  "md": 48rem,
+  "lg": 64rem,
+  "xl": 80rem
+) !default;
+
+$spacing-scale: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.5rem,
+  6: 2rem,
+  7: 3rem,
+  8: 4rem
+) !default;
+
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+  "black": 900
+) !default;

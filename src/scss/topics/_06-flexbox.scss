@@ -1,0 +1,38 @@
+/// FLEXBOX
+/// ---------------------------------------------------------------------------
+/// Parameterized flex patterns. Null parameters intentionally omit declarations.
+
+@mixin flex(
+  $direction: row,
+  $justify: flex-start,
+  $align: stretch,
+  $gap: null,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  @if $gap != null { gap: $gap; }
+}
+
+@mixin flex-center($gap: null) {
+  @include flex(row, center, center, $gap);
+}
+
+@mixin flex-between($gap: null) {
+  @include flex(row, space-between, center, $gap);
+}
+
+@mixin stack($gap: 1rem, $align: stretch) {
+  @include flex(column, flex-start, $align, $gap);
+}
+
+@mixin cluster($gap: 0.75rem, $justify: flex-start) {
+  @include flex(row, $justify, center, $gap, wrap);
+}
+
+@mixin push-right {
+  margin-inline-start: auto;
+}

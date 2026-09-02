@@ -1,0 +1,4 @@
+/// EXAMPLE: Scoped theme
+/// Compile individually with: npx sass examples/28-theme-scope.scss dist/28-theme-scope.css
+@use "../src/scss" as kit;
+@include kit.theme-scope(".preview-dark", dark);

@@ -1,0 +1,4 @@
+/// EXAMPLE: Stagger children
+/// Compile individually with: npx sass examples/39-stagger.scss dist/39-stagger.css
+@use "../src/scss" as kit;
+.list > li { @include kit.fade-up; @include kit.stagger(10, 60ms); }

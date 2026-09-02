@@ -1,0 +1,35 @@
+@use "03-functions" as fn;
+@use "01-variables" as v;
+
+/// TYPOGRAPHY
+/// ---------------------------------------------------------------------------
+/// A small type system with fluid sizing and reusable role mixins.
+
+@mixin type-body($size: v.$font-size-md, $weight: 400) {
+  font-family: v.$font-family-sans;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: v.$line-height-normal;
+}
+
+@mixin type-heading($min, $max, $weight: 700, $line-height: v.$line-height-tight) {
+  font-family: v.$font-family-sans;
+  font-size: fn.fluid($min, $max);
+  font-weight: $weight;
+  line-height: $line-height;
+  letter-spacing: -0.02em;
+}
+
+@mixin type-label($size: 0.75rem) {
+  font-size: $size;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@mixin type-code($size: 0.875rem) {
+  font-family: v.$font-family-mono;
+  font-size: $size;
+  line-height: 1.6;
+}

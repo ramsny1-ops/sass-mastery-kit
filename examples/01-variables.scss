@@ -1,0 +1,4 @@
+/// EXAMPLE: Design tokens
+/// Compile individually with: npx sass examples/01-variables.scss dist/01-variables.css
+@use "../src/scss" as kit;
+.card { padding: kit.$space-5; border-radius: kit.$radius-lg; box-shadow: kit.$shadow-md; }

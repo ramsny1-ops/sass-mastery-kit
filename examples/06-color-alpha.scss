@@ -1,0 +1,4 @@
+/// EXAMPLE: Alpha helper
+/// Compile individually with: npx sass examples/06-color-alpha.scss dist/06-color-alpha.css
+@use "../src/scss" as kit;
+.badge { background: kit.alpha(kit.token("primary"), .12); }

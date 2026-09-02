@@ -1,0 +1,5 @@
+/// EXAMPLE: Notification component
+/// Compile individually with: npx sass examples/48-notification-list.scss dist/48-notification-list.css
+@use "../src/scss" as kit;
+.notification { @include kit.flex(row, flex-start, flex-start, 1rem); @include kit.surface(1rem); }
+.notification__icon { @include kit.circle(2.5rem); flex: none; }

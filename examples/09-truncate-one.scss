@@ -1,0 +1,4 @@
+/// EXAMPLE: Single line truncation
+/// Compile individually with: npx sass examples/09-truncate-one.scss dist/09-truncate-one.css
+@use "../src/scss" as kit;
+.name { @include kit.truncate; max-width: 12rem; }

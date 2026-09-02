@@ -1,0 +1,4 @@
+/// EXAMPLE: Generate utilities
+/// Compile individually with: npx sass examples/41-spacing-utilities.scss dist/41-spacing-utilities.css
+@use "../src/scss" as kit;
+@include kit.spacing-utilities("u-");

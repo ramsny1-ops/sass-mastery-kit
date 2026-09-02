@@ -1,0 +1,4 @@
+/// EXAMPLE: Code text
+/// Compile individually with: npx sass examples/25-typography-code.scss dist/25-typography-code.css
+@use "../src/scss" as kit;
+code { @include kit.type-code; }

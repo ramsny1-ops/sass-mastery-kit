@@ -1,0 +1,4 @@
+/// EXAMPLE: UI label
+/// Compile individually with: npx sass examples/24-typography-label.scss dist/24-typography-label.css
+@use "../src/scss" as kit;
+.eyebrow { @include kit.type-label; }

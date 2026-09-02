@@ -1,0 +1,4 @@
+/// EXAMPLE: Fade-up animation
+/// Compile individually with: npx sass examples/37-fade-up.scss dist/37-fade-up.css
+@use "../src/scss" as kit;
+.notice { @include kit.fade-up(1.25rem, 500ms); }

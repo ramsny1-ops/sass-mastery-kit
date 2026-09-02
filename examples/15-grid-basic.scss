@@ -1,0 +1,4 @@
+/// EXAMPLE: Fixed grid
+/// Compile individually with: npx sass examples/15-grid-basic.scss dist/15-grid-basic.css
+@use "../src/scss" as kit;
+.gallery { @include kit.grid(4, 1rem); }

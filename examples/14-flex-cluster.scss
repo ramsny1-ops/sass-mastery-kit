@@ -1,0 +1,4 @@
+/// EXAMPLE: Wrapping cluster
+/// Compile individually with: npx sass examples/14-flex-cluster.scss dist/14-flex-cluster.css
+@use "../src/scss" as kit;
+.tags { @include kit.cluster(.5rem); }

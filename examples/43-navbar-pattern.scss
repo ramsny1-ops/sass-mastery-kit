@@ -1,0 +1,4 @@
+/// EXAMPLE: Real navbar
+/// Compile individually with: npx sass examples/43-navbar-pattern.scss dist/43-navbar-pattern.css
+@use "../src/scss" as kit;
+.nav { @include kit.flex-between(kit.space(4)); padding: kit.space(4) kit.space(5); border-bottom: 1px solid kit.token("border"); }

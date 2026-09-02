@@ -1,0 +1,22 @@
+@use "03-functions" as fn;
+@use "04-mixins" as m;
+@use "06-flexbox" as flex;
+@use "07-grid" as grid;
+
+/// UTILITIES
+/// ---------------------------------------------------------------------------
+/// A compact optional utility layer. Keep utilities intentional; do not generate
+/// thousands of classes unless your project genuinely benefits from them.
+
+@mixin core-utilities {
+  .u-hidden { display: none !important; }
+  .u-sr-only { @include m.visually-hidden; }
+  .u-flex { display: flex !important; }
+  .u-flex-center { @include flex.flex-center; }
+  .u-flex-between { @include flex.flex-between; }
+  .u-grid { display: grid !important; }
+  .u-text-center { text-align: center !important; }
+  .u-text-muted { color: fn.token("text-muted") !important; }
+  .u-full-width { width: 100% !important; }
+  .u-rounded { border-radius: 0.75rem !important; }
+}

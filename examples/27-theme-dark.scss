@@ -1,0 +1,4 @@
+/// EXAMPLE: Dark theme variables
+/// Compile individually with: npx sass examples/27-theme-dark.scss dist/27-theme-dark.css
+@use "../src/scss" as kit;
+[data-theme="dark"] { @include kit.theme-dark; }

@@ -1,0 +1,4 @@
+/// EXAMPLE: Vertical stack
+/// Compile individually with: npx sass examples/13-flex-stack.scss dist/13-flex-stack.css
+@use "../src/scss" as kit;
+.form { @include kit.stack(.75rem); }

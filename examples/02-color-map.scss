@@ -1,0 +1,4 @@
+/// EXAMPLE: Read map token
+/// Compile individually with: npx sass examples/02-color-map.scss dist/02-color-map.css
+@use "../src/scss" as kit;
+.alert { color: kit.token("danger"); border-color: kit.token("warning"); }

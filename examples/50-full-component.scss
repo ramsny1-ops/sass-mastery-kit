@@ -1,0 +1,8 @@
+/// EXAMPLE: Composed real component
+/// Compile individually with: npx sass examples/50-full-component.scss dist/50-full-component.css
+@use "../src/scss" as kit;
+.product-card { @include kit.surface(1.25rem); @include kit.interactive-surface; @include kit.stack(1rem); }
+.product-card__media { aspect-ratio: 4 / 3; border-radius: kit.$radius-md; overflow: hidden; }
+.product-card__title { @include kit.type-heading(1.25rem, 1.6rem, 700); }
+.product-card__footer { @include kit.flex-between(.75rem); }
+.product-card__buy { @include kit.button-base; @include kit.button-variant(kit.token("primary"), white); }

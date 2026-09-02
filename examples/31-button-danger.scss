@@ -1,0 +1,4 @@
+/// EXAMPLE: Danger button
+/// Compile individually with: npx sass examples/31-button-danger.scss dist/31-button-danger.css
+@use "../src/scss" as kit;
+.button-danger { @include kit.button-base; @include kit.button-variant(kit.token("danger"), white); }

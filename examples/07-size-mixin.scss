@@ -1,0 +1,4 @@
+/// EXAMPLE: Size helper
+/// Compile individually with: npx sass examples/07-size-mixin.scss dist/07-size-mixin.css
+@use "../src/scss" as kit;
+.avatar { @include kit.size(3rem, 4rem); }

@@ -1,0 +1,18 @@
+{
+  "name": "sass-mastery-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Modern Sass mastery project with 15 topic modules and 50 practical examples.",
+  "scripts": {
+    "build": "sass src/main.scss dist/main.css --style=expanded --source-map",
+    "build:compressed": "sass src/main.scss dist/main.min.css --style=compressed --no-source-map",
+    "watch": "sass --watch src/main.scss:dist/main.css --style=expanded",
+    "check": "node scripts/verify.mjs"
+  },
+  "devDependencies": {
+    "sass": "^1.83.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

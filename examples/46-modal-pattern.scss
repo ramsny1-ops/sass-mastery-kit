@@ -1,0 +1,4 @@
+/// EXAMPLE: Modal shell
+/// Compile individually with: npx sass examples/46-modal-pattern.scss dist/46-modal-pattern.css
+@use "../src/scss" as kit;
+.modal { @include kit.absolute-fill; position: fixed; display: grid; place-items: center; background: rgb(0 0 0 / .5); }

@@ -1,0 +1,22 @@
+@use "scss" as kit;
+@use "scss/components/navbar";
+@use "scss/components/hero";
+@use "scss/components/pricing-card";
+@use "scss/components/dashboard";
+@use "scss/components/modal";
+
+:root { @include kit.theme-light; }
+[data-theme="dark"] { @include kit.theme-dark; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: kit.$font-size-root; }
+body {
+  margin: 0;
+  font-family: kit.$font-family-sans;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+button { @include kit.button-base; }
+input, select, textarea { @include kit.field; }
+@include kit.core-utilities;
+@include kit.spacing-utilities("u-");

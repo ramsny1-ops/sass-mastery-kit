@@ -1,0 +1,31 @@
+@use "sass:map";
+@use "02-maps" as maps;
+
+/// RESPONSIVE DESIGN
+/// ---------------------------------------------------------------------------
+/// Mobile-first helpers using named breakpoint map values.
+
+@function breakpoint($name) {
+  @if not map.has-key(maps.$breakpoints, $name) {
+    @error "Unknown breakpoint `#{$name}`. Available: #{map.keys(maps.$breakpoints)}";
+  }
+  @return map.get(maps.$breakpoints, $name);
+}
+
+@mixin up($name) {
+  @media (min-width: breakpoint($name)) { @content; }
+}
+
+@mixin down($name) {
+  @media (max-width: calc(#{breakpoint($name)} - 0.02px)) { @content; }
+}
+
+@mixin between($min, $max) {
+  @media (min-width: breakpoint($min)) and (max-width: calc(#{breakpoint($max)} - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin container-query($min-width) {
+  @container (min-width: $min-width) { @content; }
+}

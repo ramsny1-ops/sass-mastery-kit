@@ -1,0 +1,4 @@
+/// EXAMPLE: Multi-line truncation
+/// Compile individually with: npx sass examples/10-truncate-multi.scss dist/10-truncate-multi.css
+@use "../src/scss" as kit;
+.summary { @include kit.truncate(3); }

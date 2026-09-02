@@ -1,0 +1,6 @@
+/// EXAMPLE: 12-column grid
+/// Compile individually with: npx sass examples/17-twelve-column.scss dist/17-twelve-column.css
+@use "../src/scss" as kit;
+.layout { @include kit.twelve-column(1.5rem); }
+.main { @include kit.span(8); }
+.aside { @include kit.span(4); }

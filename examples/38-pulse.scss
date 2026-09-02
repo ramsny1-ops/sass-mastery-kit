@@ -1,0 +1,4 @@
+/// EXAMPLE: Pulse animation
+/// Compile individually with: npx sass examples/38-pulse.scss dist/38-pulse.css
+@use "../src/scss" as kit;
+.live-dot { @include kit.pulse(1.15, 1.2s); }

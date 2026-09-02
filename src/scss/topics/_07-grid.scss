@@ -1,0 +1,30 @@
+/// CSS GRID
+/// ---------------------------------------------------------------------------
+/// Grid mixins keep repetitive responsive layout rules concise.
+
+@mixin grid($columns: 1, $gap: 1rem, $align: stretch) {
+  display: grid;
+  grid-template-columns: repeat($columns, minmax(0, 1fr));
+  gap: $gap;
+  align-items: $align;
+}
+
+@mixin auto-grid($min: 16rem, $gap: 1rem, $mode: auto-fit) {
+  display: grid;
+  grid-template-columns: repeat($mode, minmax(min(100%, $min), 1fr));
+  gap: $gap;
+}
+
+@mixin grid-area($name) {
+  grid-area: $name;
+}
+
+@mixin twelve-column($gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: $gap;
+}
+
+@mixin span($columns) {
+  grid-column: span $columns;
+}

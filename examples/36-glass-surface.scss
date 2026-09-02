@@ -1,0 +1,4 @@
+/// EXAMPLE: Glass surface
+/// Compile individually with: npx sass examples/36-glass-surface.scss dist/36-glass-surface.css
+@use "../src/scss" as kit;
+.floating-panel { @include kit.glass-surface(22px); }

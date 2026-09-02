@@ -1,0 +1,4 @@
+/// EXAMPLE: Generate core utilities
+/// Compile individually with: npx sass examples/42-core-utilities.scss dist/42-core-utilities.css
+@use "../src/scss" as kit;
+@include kit.core-utilities;

@@ -1,0 +1,4 @@
+/// EXAMPLE: Form field group
+/// Compile individually with: npx sass examples/33-form-group.scss dist/33-form-group.css
+@use "../src/scss" as kit;
+.field-group { @include kit.field-group(.5rem); }

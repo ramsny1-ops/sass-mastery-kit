@@ -1,0 +1,4 @@
+/// EXAMPLE: Fluid heading
+/// Compile individually with: npx sass examples/23-typography-heading.scss dist/23-typography-heading.css
+@use "../src/scss" as kit;
+h1 { @include kit.type-heading(2rem, 4.5rem, 800); }

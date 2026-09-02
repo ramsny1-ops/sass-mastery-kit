@@ -1,0 +1,28 @@
+@use "03-functions" as fn;
+@use "04-mixins" as m;
+@use "06-flexbox" as flex;
+
+/// BUTTON SYSTEM
+/// ---------------------------------------------------------------------------
+/// Parameterized component mixin; suitable for a design system or app shell.
+
+@mixin button-base($height: 2.75rem, $radius: 0.75rem) {
+  @include flex.flex-center(0.5rem);
+  min-height: $height;
+  padding-inline: 1rem;
+  border: 1px solid transparent;
+  border-radius: $radius;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 150ms ease, background-color 150ms ease, border-color 150ms ease;
+  @include m.focus-ring(fn.token("primary"));
+  &:active { transform: translateY(1px); }
+  &:disabled { opacity: 0.5; cursor: not-allowed; }
+}
+
+@mixin button-variant($background, $foreground, $border: $background) {
+  background: $background;
+  color: $foreground;
+  border-color: $border;
+}

@@ -1,0 +1,4 @@
+/// EXAMPLE: Dashboard layout
+/// Compile individually with: npx sass examples/45-dashboard-layout.scss dist/45-dashboard-layout.css
+@use "../src/scss" as kit;
+.dashboard { display: grid; grid-template-columns: 15rem 1fr; @include kit.down("md") { grid-template-columns: 1fr; } }

@@ -1,0 +1,4 @@
+/// EXAMPLE: Body typography
+/// Compile individually with: npx sass examples/22-typography-body.scss dist/22-typography-body.css
+@use "../src/scss" as kit;
+.article { @include kit.type-body(1.05rem); }

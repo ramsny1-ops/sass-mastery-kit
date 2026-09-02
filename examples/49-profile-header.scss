@@ -1,0 +1,6 @@
+/// EXAMPLE: Profile header
+/// Compile individually with: npx sass examples/49-profile-header.scss dist/49-profile-header.css
+@use "../src/scss" as kit;
+.profile { @include kit.flex(row, flex-start, center, 1rem, wrap); }
+.profile__avatar { @include kit.circle(5rem); }
+.profile__actions { @include kit.push-right; }

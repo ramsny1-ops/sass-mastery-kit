@@ -1,0 +1,33 @@
+@use "sass:map";
+@use "03-functions" as fn;
+@use "02-maps" as maps;
+
+/// COLOR AND THEMES
+/// ---------------------------------------------------------------------------
+/// Sass calculates build-time values; CSS custom properties handle runtime theme
+/// switching. This hybrid approach is usually more flexible than Sass-only themes.
+
+@mixin theme-light {
+  --color-bg: #ffffff;
+  --color-surface: #f7f8fb;
+  --color-text: #15171c;
+  --color-muted: #667085;
+  --color-border: #d8dde7;
+  --color-accent: #{fn.token("primary")};
+}
+
+@mixin theme-dark {
+  --color-bg: #0d0f14;
+  --color-surface: #151820;
+  --color-text: #f3f5f8;
+  --color-muted: #9aa3b2;
+  --color-border: #2b303b;
+  --color-accent: #{fn.tint(fn.token("primary"), 10%)};
+}
+
+@mixin theme-scope($selector, $theme: light) {
+  #{$selector} {
+    @if $theme == dark { @include theme-dark; }
+    @else { @include theme-light; }
+  }
+}

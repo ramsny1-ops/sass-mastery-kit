@@ -1,0 +1,4 @@
+/// EXAMPLE: Max-width breakpoint
+/// Compile individually with: npx sass examples/19-responsive-down.scss dist/19-responsive-down.css
+@use "../src/scss" as kit;
+.desktop-only { @include kit.down("md") { display: none; } }

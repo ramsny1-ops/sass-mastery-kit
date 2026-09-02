@@ -1,0 +1,4 @@
+/// EXAMPLE: Responsive auto-grid
+/// Compile individually with: npx sass examples/16-auto-grid.scss dist/16-auto-grid.css
+@use "../src/scss" as kit;
+.cards { @include kit.auto-grid(18rem, 1.25rem); }

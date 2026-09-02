@@ -1,0 +1,17 @@
+/// PUBLIC API
+/// Consumers can `@use "path/to/scss" as kit;` and access forwarded members.
+@forward "topics/01-variables";
+@forward "topics/02-maps";
+@forward "topics/03-functions";
+@forward "topics/04-mixins";
+@forward "topics/05-typography";
+@forward "topics/06-flexbox";
+@forward "topics/07-grid";
+@forward "topics/08-responsive";
+@forward "topics/09-spacing";
+@forward "topics/10-colors-themes";
+@forward "topics/11-buttons";
+@forward "topics/12-forms";
+@forward "topics/13-cards";
+@forward "topics/14-animations";
+@forward "topics/15-utilities";

@@ -1,0 +1,54 @@
+@use "sass:color";
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+@use "sass:string";
+@use "02-maps" as maps;
+
+/// FUNCTIONS
+/// ---------------------------------------------------------------------------
+/// Functions should calculate and return values. They should not emit selectors.
+/// Keep functions deterministic when possible so they are easy to test mentally.
+
+@function token($name, $tokens: maps.$colors) {
+  @if not map.has-key($tokens, $name) {
+    @error "Unknown token `#{$name}`. Available keys: #{map.keys($tokens)}";
+  }
+  @return map.get($tokens, $name);
+}
+
+@function space($step) {
+  @if not map.has-key(maps.$spacing-scale, $step) {
+    @error "Unknown spacing step `#{$step}`.";
+  }
+  @return map.get(maps.$spacing-scale, $step);
+}
+
+@function rem($pixels, $base: 16px) {
+  @if math.unit($pixels) != "px" or math.unit($base) != "px" {
+    @error "rem() expects pixel values, e.g. rem(24px).";
+  }
+  @return math.div($pixels, $base) * 1rem;
+}
+
+@function fluid($min-size, $max-size, $min-vw: 20rem, $max-vw: 75rem) {
+  $slope: math.div($max-size - $min-size, $max-vw - $min-vw);
+  $intercept: $min-size - $slope * $min-vw;
+  @return clamp(#{$min-size}, #{$intercept} + #{$slope * 100vw}, #{$max-size});
+}
+
+@function alpha($color-value, $opacity) {
+  @return color.change($color-value, $alpha: $opacity);
+}
+
+@function shade($color-value, $amount: 10%) {
+  @return color.mix(black, $color-value, $amount);
+}
+
+@function tint($color-value, $amount: 10%) {
+  @return color.mix(white, $color-value, $amount);
+}
+
+@function negative($value) {
+  @return $value * -1;
+}
